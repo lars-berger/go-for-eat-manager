@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import logo from './../../assets/logo_green@2x.png';
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
-import './App.css';
+import './login.css';
 
-class App extends Component {
+class Login extends Component {
   constructor() {
     super();
     this.state = {
@@ -138,4 +138,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Login;

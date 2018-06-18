@@ -32,41 +32,6 @@ class App extends Component {
     // )
 
 
-    // response is the following:
-
-//     {
-//     "status": "success",
-//     "method": "basic",
-//     "restaurant": {
-//         "_id": "5b24ee0b8d568b10bdc2f1fe",
-//         "email": "marre@bob.com",
-//         "token": "f63d1ad9-8142-4907-a5b4-c031979bbd8b",
-//         "googlePlaceData": {
-//             "id": "b4b62ff1d6d37bc400ef967054b4914afda5966e",
-//             "description": "Gött, Carrer d'Àvila, Barcelona, Spain",
-//             "placeId": "ChIJuU91KBejpBIRotUBek2jPqE",
-//             "active": true,
-//             "index": 0,
-//             "formattedSuggestion": {
-//                 "mainText": "Gött",
-//                 "secondaryText": "Carrer d'Àvila, Barcelona, Spain"
-//             },
-//             "matchedSubstrings": [
-//                 "obj",
-//                 "obj"
-//             ],
-//             "terms": [
-//                 "uno",
-//                 "dos",
-//                 "tres"
-//             ],
-//             " types": [
-//                 "establishment"
-//             ]
-//             }
-//          }
-//      }
-
 
 
   handleInputChange = (e) => {
@@ -75,7 +40,7 @@ class App extends Component {
 
   submitLogin = (e) => {
     e.preventDefault();
-    fetch('http://192.168.1.148:5000/manager/register', {
+    fetch('http://192.168.1.148:5000/manager/login', {
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain',

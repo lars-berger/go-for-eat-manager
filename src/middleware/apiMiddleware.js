@@ -22,7 +22,7 @@ export default store => next => action => {
 
         // console.log(res.restaurant.token);
         localStorage.setItem('go-for-eat-token', res.restaurant.token || '')   
-
+        history.push("/youareRegistere");
         store.dispatch({
           ...action,
           type: action.type + '_SUCCESS',

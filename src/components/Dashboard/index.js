@@ -29,7 +29,7 @@ class Dashboard extends Component {
         </nav>
         <div className="hero">
           <div className="hero-logo">
-            <img src={logo} />
+            <img className="hero-logo-img" src={logo} />
           </div>
           <div className="hero-header">
             <h2>Ham Holy Burger</h2>

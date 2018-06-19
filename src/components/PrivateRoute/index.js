@@ -2,10 +2,11 @@ import React from "react"
 import { Redirect, Route } from "react-router-dom"
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
-
-  return (
+  const token = localStorage.getItem('go-for-eat-token');
+  console.log(token);
+    return (
     <Route {...rest} render={(props) => (
-      !!props.token
+      token
       ? <Component {...props} />
       :  <Redirect to={{
               pathname: "/",

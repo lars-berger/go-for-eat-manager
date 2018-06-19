@@ -1,11 +1,14 @@
 
-
-
-export default function (state = [], action) {
+export default function(state = [], action) {
   switch (action.type) {
-    case 'whatever':
-      return state;
+    case "REGISTER":
+      return state
+    case "REGISTER_SUCCESS":
+      return {
+        ...state, 
+        token: action.res.restaurant.token
+      } 
     default:
-      return state;
+      return state
   }
 }

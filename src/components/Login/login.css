@@ -1,9 +1,11 @@
-body {
+:root {
   background-image: url('./../../assets/login-background.png');
+  background-color: #0C0D0C;
 }
 
 .login-container {
-  width: 40%;
+  width: 38em;
+  max-width: 335px;
   margin: 0 auto;
 }
 
@@ -11,7 +13,7 @@ body {
 .login-logo {
   display: flex;
   justify-content: center;
-  margin: 7vh 0;
+  margin: 1em 0 1em;
 }
 
 .login-card {
@@ -19,6 +21,7 @@ body {
   border-radius: 4px;
   padding: 1px;
 }
+
 
 .login-card-form {
   width: 80%;

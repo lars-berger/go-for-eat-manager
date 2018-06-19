@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import logo from './../../assets/logo_green@2x.png';
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
-import './App.css';
+import './login.css';
 
-class App extends Component {
+class Login extends Component {
   constructor() {
     super();
     this.state = {
@@ -14,25 +13,6 @@ class App extends Component {
     }
 
   }
-
-    // // create, Basic Auth for now
-    // .post(
-    //   '/manager/register/',
-    //   managerController.createRestaurant.bind(managerController)
-    // )
-    // // get my info (login)
-    // .get(
-    //   '/manager/login/',
-    //   managerController.getRestaurant.bind(managerController)
-    // )
-    // // edit my info 
-    // .put(
-    //   '/manager/restaurant/:id',
-    //   managerController.editRestaurant.bind(managerController)
-    // )
-
-
-
 
   handleInputChange = (e) => {
     this.setState({ [e.target.name]: e.target.value })
@@ -77,9 +57,6 @@ class App extends Component {
     return (
       <div className="App">
         <div className="login-container">
-          <div className="login-logo">
-            <img src={logo} alt="login logo" />
-          </div>
           <div className="login-card">
             <form onSubmit={this.submitLogin} className="login-card-form" method="post">
               <h2 className="login-header">Login</h2>
@@ -138,4 +115,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Login;

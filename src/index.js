@@ -27,8 +27,8 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
       <Switch>
-        <Route exact path="/" component={Auth} component={Login} props="login" />
-        <Route exact path="/register" component={Auth} component={Register} props="register" />
+        <Route exact path="/" component={Auth} props="login" />
+        <Route exact path="/register" component={Auth}  props="register" />
         <PrivateRoute exact path="/dashboard" isLogged="true" component={Dashboard}/>
 
         {/* <Route path='/' component="show 404" /> */}

@@ -16,8 +16,7 @@ export default class Auth extends React.PureComponent {
   constructor(props){
     super(props)
     this.state = {
-      index: 0,
-      inView: props.inView || 'nada'
+      index: props.location.pathname === '/register' ? 0 : 1,
     }
   }
 

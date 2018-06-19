@@ -3,8 +3,7 @@ import ReactDOM from "react-dom"
 import { createStore, applyMiddleware, compose } from "redux"
 import { Provider } from "react-redux"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import Login from "./components/Login"
-import Register from "./components/Register"
+import Auth from "./containers/Auth"
 import Dashboard from "./components/Dashboard"
 import reducers from "./reducers"
 import apiMiddleware from "./middleware/apiMiddleware"
@@ -19,8 +18,8 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <Switch>
-        <Route exact path="/" component={Login} />
-        <Route exact path="/register" component={Register} />
+        <Route exact path="/" component={Auth} props="login"/>
+        <Route exact path="/register" component={Auth} props="register" />
         <Route exact path="/dashboard" component={Dashboard} />
         {/* <Route path='/' component="show 404" /> */}
         {/* <PrivateRoute path="/dashboard" component={Dashboard} /> */}

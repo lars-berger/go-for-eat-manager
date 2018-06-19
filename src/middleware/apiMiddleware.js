@@ -6,6 +6,7 @@ export default store => next => action => {
   console.log('>>>>>', action)
   console.log('>>>>>', action.url)
 
+
   if (action.url) {
 
     fetch(`${baseURL}${action.url}`, {

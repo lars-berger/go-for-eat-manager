@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import logo from "./../../assets/logo_green@2x.png"
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng
@@ -23,7 +22,6 @@ class Register extends Component {
 
   componentDidUpdate = () => {
     console.log("something..................................", this.props.token);
-    
   }
 
   submitRegister = e => {
@@ -66,9 +64,7 @@ class Register extends Component {
     return (
       <div className="Register">
         <div className="login-container">
-          <div className="login-logo">
-            <img src={logo} alt="login logo" />
-          </div>
+
           <div className="login-card">
             <form
               onSubmit={this.submitRegister}

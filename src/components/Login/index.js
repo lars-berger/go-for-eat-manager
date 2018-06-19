@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './../../assets/logo_green@2x.png';
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
 import './login.css';
 
@@ -14,25 +13,6 @@ class Login extends Component {
     }
 
   }
-
-    // // create, Basic Auth for now
-    // .post(
-    //   '/manager/register/',
-    //   managerController.createRestaurant.bind(managerController)
-    // )
-    // // get my info (login)
-    // .get(
-    //   '/manager/login/',
-    //   managerController.getRestaurant.bind(managerController)
-    // )
-    // // edit my info 
-    // .put(
-    //   '/manager/restaurant/:id',
-    //   managerController.editRestaurant.bind(managerController)
-    // )
-
-
-
 
   handleInputChange = (e) => {
     this.setState({ [e.target.name]: e.target.value })
@@ -77,9 +57,6 @@ class Login extends Component {
     return (
       <div className="App">
         <div className="login-container">
-          <div className="login-logo">
-            <img src={logo} alt="login logo" />
-          </div>
           <div className="login-card">
             <form onSubmit={this.submitLogin} className="login-card-form" method="post">
               <h2 className="login-header">Login</h2>

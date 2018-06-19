@@ -1,0 +1,51 @@
+
+html,
+body,
+div,
+a,
+i,
+button,
+select,
+option,
+optgroup,
+hr,
+br {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+
+.auth-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  margin-bottom: 4em;
+
+}
+
+.switch-view {
+  text-align: center;
+  margin: 0 auto 1em;
+  color: #fff;
+}
+.switch-view:hover {
+  text-decoration: underline;
+  margin: 0 auto 1em;
+  color: #d5d5d5;
+}
+
+
+.main-transition > div {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  will-change: transform, opacity;
+}

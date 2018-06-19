@@ -5,8 +5,6 @@ const baseURL = "http://192.168.1.148:5000"
 export default store => next => action => {
   console.log('>>>>>', action)
   console.log('>>>>>', action.url)
-
-
   if (action.url) {
 
     fetch(`${baseURL}${action.url}`, {
@@ -22,7 +20,6 @@ export default store => next => action => {
 
         // console.log(res.restaurant.token);
         localStorage.setItem('go-for-eat-token', res.restaurant.token || '')   
-        history.push("/youareRegistere");
         store.dispatch({
           ...action,
           type: action.type + '_SUCCESS',

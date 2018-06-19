@@ -21,6 +21,11 @@ class Register extends Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
+  componentDidUpdate = () => {
+    console.log("something..................................", this.props.token);
+    
+  }
+
   submitRegister = e => {
     //     if (invalid input) {
     // stop this shit
@@ -165,4 +170,11 @@ const mapDispatchToProps = dispatch => ({
   }
 })
 
-export default connect(null, mapDispatchToProps)(Register)
+
+const mapStateToProps = (store) => ({
+  token: store.token
+
+})
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Register)

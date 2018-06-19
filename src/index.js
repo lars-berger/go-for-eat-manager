@@ -29,7 +29,8 @@ ReactDOM.render(
       <Switch>
         <Route path="/" component={Auth} />
         <Route exact path="/register" component={Auth} />
-        <PrivateRoute exact path="/dashboard" isLogged="true" component={Dashboard}/>
+        <PrivateRoute exact path="/dashboard" isLogged="true" token={store.getState().token}
+        component={Dashboard}/>
 
         {/* <Route path='/' component="show 404" /> */}
         {/* <PrivateRoute path="/dashboard" component={Dashboard} /> */}

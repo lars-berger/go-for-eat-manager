@@ -39,7 +39,8 @@ class Register extends Component {
       googlePlaceData: this.state.googlePlaceData
     }
 
-    {this.props.register(registerData)}
+    this.props.register(registerData)
+    this.props.navigateTo('/dashboard')
 
     // }
   }

@@ -22,7 +22,6 @@ class Register extends Component {
 
   componentDidUpdate = () => {
     console.log("something..................................", this.props.token);
-
   }
 
   submitRegister = e => {

@@ -55,4 +55,10 @@ nav {
   background-image: url('./../../assets/login-background.png');
   color: white;
   text-align: center;
+
+}
+
+.hero-logo-img {
+  height: 5em;
+
 }

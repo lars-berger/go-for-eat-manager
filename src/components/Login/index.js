@@ -31,7 +31,7 @@ class Login extends Component {
       return
     }
     fetch('http://192.168.1.148:5000/manager/login', {
-      method: 'POST',
+      method: 'GET',
       headers: {
         'Accept': 'application/json, text/plain',
         'Content-Type': 'application/json',
@@ -40,7 +40,10 @@ class Login extends Component {
       }
     })
       .then(res => res.json())
-      .then(res => this.setState({server: {response: res.status}}))
+      .then(res => {
+        this.props.navigateTo('/dashboard')
+      })
+      .catch(err => this.setState({server: {response: err.toString()}}))
   }
 
   handleChange = (address) => {

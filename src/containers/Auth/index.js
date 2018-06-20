@@ -19,12 +19,8 @@ export default class Auth extends React.PureComponent {
       style  => <animated.div style={{ ...style }}>
         <Register navigateTo={(path) => this.props.history.push(path)}/>
       </animated.div>,
-      style  => <animated.div style={{ ...style }}><Login /></animated.div>
+      style  => <animated.div style={{ ...style }}><Login navigateTo={(path) => this.props.history.push(path)} /></animated.div>
     ]
-  }
-
-  navigateHandler = (path) => {
-
   }
 
   toggle = e => {

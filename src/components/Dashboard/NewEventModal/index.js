@@ -81,7 +81,7 @@ class NewEventModal extends React.Component {
                 <input onChange={this.handleInputChange} value={this.state.time} type="text" name="time" placeholder="Optional" className="addnew-textfield" />
               </div>
               <div className="form-field">
-                <p onClick={this.closeModal}>BUTTON</p>
+                <p onClick={this.props.closeModal}>BUTTON</p>
                 <input type="submit" className="btn addnew-submit" value="Confirm" />
               </div>
               <div className="form-field">

@@ -60,18 +60,8 @@ class Dashboard extends Component {
     }
   }
 
-  closeModal = () => {
-    const maskEle = document.getElementById('mask');
-    const modalEle = document.getElementById('modal');
-
-    maskEle.style.visibility = 'hidden';
-    maskEle.style.opacity = 0;
-
-    modalEle.style.visibility = 'hidden';
-    modalEle.style.opacity = 0;
-  }
-
-  openModal = () => {
+  openModal = (arg) => {
+    if (arg === "saved") this.fetchEvents()
     this.setState({modalVisible: true})
   }
 

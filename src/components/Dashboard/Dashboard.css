@@ -4,12 +4,23 @@
   height: 100vh;
 }
 
+/*     FONT STYLINGS      */
+
 p {
   margin-top: 0;
 }
 
+.dashboard-h1 {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 3em;
+  margin: 0 0 0.7em 0;
+}
+
+/*     TOP NAVIGATION BAR       */
+
 nav {
-  background-color: #2ecc71;
+  background-color: #33af68;
   color: white;
   display: flex;
 }
@@ -33,8 +44,10 @@ nav {
   margin-left: 2em;
 }
 
+
+/*       HERO STYLING      */
 .green-underline {
-  border: 2.5px solid #2ecc71;
+  border: 2.5px solid #33af68;
   border-radius: 1px;
   width: 80px;
   margin: 3px;
@@ -60,5 +73,34 @@ nav {
 
 .hero-logo-img {
   height: 5em;
+}
 
+/*     EVENTS STYLING    */
+
+.events {
+  background-color: white;
+  height: 80vh;
+}
+
+.events-header {
+  padding: 1em 0;
+  background-color: #33af68;
+  color: white;
+}
+
+.events-header-filters {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.add-event-button {
+  position: absolute;
+  background-color: white;
+  color: #33af68;
+  font-size: 1.5em;
+  text-align: center;
+  margin: -1vh 0 0 3vw;
 }

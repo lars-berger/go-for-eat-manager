@@ -28,7 +28,7 @@ class NewEventModal extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    fetch('http://192.168.1.148:5000/manager/partyof/', {
+    fetch('https://go-for-eat.herokuapp.com/manager/partyof/', {
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain', 
@@ -86,7 +86,7 @@ class NewEventModal extends React.Component {
               </div>
               <div className="form-field">
                 <p className="addnew-label">Offer:</p>
-                <input type="text" name="offer" value={this.state.offer}/>
+                <input onChange={this.handleInputChange} type="text" name="offer" value={this.state.offer}/>
               </div>
             </form>
           </div>

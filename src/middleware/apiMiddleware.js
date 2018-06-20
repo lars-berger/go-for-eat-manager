@@ -1,4 +1,4 @@
-const baseURL = "http://192.168.1.148:5000"
+const baseURL = "https://go-for-eat.herokuapp.com/"
 
 export default store => next => async (action) => {
   if (action.url) {

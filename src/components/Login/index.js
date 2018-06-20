@@ -30,7 +30,7 @@ class Login extends Component {
       console.log('no email or password');
       return
     }
-    fetch('http://192.168.1.148:5000/manager/login', {
+    fetch('https://go-for-eat.herokuapp.com/manager/login', {
       method: 'GET',
       headers: {
         'Accept': 'application/json, text/plain',

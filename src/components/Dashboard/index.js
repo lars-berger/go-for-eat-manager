@@ -21,7 +21,7 @@ class Dashboard extends Component {
 
   fetchEvents = () => {
 
-    fetch('http://192.168.1.148:5000/manager/partyof', {
+    fetch('https://go-for-eat.herokuapp.com/manager/partyof', {
       method: 'GET',
       headers: {
         'Authorization': 'Bearer: a6471e34-ed95-425c-af0d-ba1d598078fa',
@@ -48,7 +48,7 @@ class Dashboard extends Component {
         <div className="event-cards">
           {this.state.events.map(e => {
             return (
-              <EventList when={e.when} attendees={e.attendees.length} partyOf={e.party_cipanti} />
+              <EventList when={e.when} time={e.time} attendees={e.attendees.length} partyOf={e.party_cipanti} offer={e.offer}/>
             )
           })}
         </div>

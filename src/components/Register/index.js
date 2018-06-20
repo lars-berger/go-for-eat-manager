@@ -24,13 +24,8 @@ class Register extends Component {
     console.log("something..................................", this.props.token);
   }
 
-  submitRegister = e => {
-    //     if (invalid input) {
-    // stop this shit
-    //     }
-    //     else {
+  submitRegister = async e => {
     e.preventDefault()
-    //
     const registerData = {
       name: this.state.name,
       email: this.state.email,
@@ -38,8 +33,11 @@ class Register extends Component {
       address: this.state.address,
       googlePlaceData: this.state.googlePlaceData
     }
+    // dispatch with payload
+    await this.props.register(registerData)
 
-    {this.props.register(registerData)}
+    // then this
+    this.props.navigateTo('/dashboard')
 
     // }
   }

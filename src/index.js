@@ -22,14 +22,14 @@ const store = createStore(
   composeEnhancers(applyMiddleware(apiMiddleware))
 )
 
-const whatever = 42;
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
       <Switch>
-        <Route exact path="/" component={Auth} props="login" />
-        <Route exact path="/register" component={Auth}  props="register" />
-        <PrivateRoute exact path="/dashboard" isLogged="true" component={Dashboard}/>
+        <Route exact path="/" component={Auth} />
+        <Route exact path="/register" component={Auth} />
+        <PrivateRoute exact path="/dashboard"
+        component={Dashboard}/>
 
         {/* <Route path='/' component="show 404" /> */}
         {/* <PrivateRoute path="/dashboard" component={Dashboard} /> */}

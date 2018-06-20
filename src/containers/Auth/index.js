@@ -7,18 +7,24 @@ import logo from "../../assets/logo_green@2x.png"
 import Register from "../../components/Register"
 import Login from "../../components/Login"
 
-const components = [
-  style  => <animated.div style={{ ...style }}><Register /></animated.div>,
-  style  => <animated.div style={{ ...style }}><Login /></animated.div>
-]
+
 
 export default class Auth extends React.PureComponent {
   constructor(props){
     super(props)
     this.state = {
-      index: 0,
-      inView: props.inView || 'nada'
+      index: props.location.pathname === '/register' ? 0 : 1,
     }
+    this.components = [
+      style  => <animated.div style={{ ...style }}>
+        <Register navigateTo={(path) => this.props.history.push(path)}/>
+      </animated.div>,
+      style  => <animated.div style={{ ...style }}><Login /></animated.div>
+    ]
+  }
+
+  navigateHandler = (path) => {
+
   }
 
   toggle = e => {
@@ -42,7 +48,7 @@ export default class Auth extends React.PureComponent {
             from={{ opacity: 0, transform: 'translate3d(80%,0,0)' }}
             enter={{ opacity: 1, transform: 'translate3d(-50%,0,0)' }}
             leave={{ opacity: 0, transform: 'translate3d(-80%,0,0)' }}>
-            {components[this.state.index]}
+            {this.components[this.state.index]}
           </Transition>
         </div>
       </div>

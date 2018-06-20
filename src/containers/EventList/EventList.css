@@ -1,0 +1,39 @@
+.event-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  max-width: 60em;
+  margin: 0 auto;
+}
+
+.card {
+  margin: 0.5em;
+}
+
+.event-card-date {
+  margin: 0 0 0.2em 0;
+}
+
+.event-card-time {
+  display: block;
+  color: rgb(153, 153, 153) !important;
+  font-size: 1.2em;
+}
+
+.event-card-partipants {
+  display: block;
+  margin-top: 1.2em !important;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.card-action {
+  padding: 0.7em 0 !important;
+}
+
+.card-link-edit {
+  color: #2ecc71 !important;
+  float: right;
+  font-size: 1.1em;
+}

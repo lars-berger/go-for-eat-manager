@@ -48,7 +48,7 @@ class Dashboard extends Component {
         <div className="event-cards">
           {this.state.events.map(e => {
             return (
-              <EventList when={e.when} time={e.time} attendees={e.attendees.length} partyOf={e.party_cipanti} offer={e.offer}/>
+              <EventList key={e._id} when={e.when} time={e.time} attendees={e.attendees.length} partyOf={e.party_cipanti} offer={e.offer}/>
             )
           })}
         </div>
@@ -77,7 +77,6 @@ class Dashboard extends Component {
         <nav>
           <div className="nav-left" />
           <div className="nav-center">
-            <img className="nav-center-logo" src={logoWhite} />
           </div>
           <div className="nav-right">
             <p>Events</p>

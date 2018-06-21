@@ -50,7 +50,7 @@ nav {
   border: 2.5px solid #33af68;
   border-radius: 1px;
   width: 80px;
-  margin: 3px;
+  margin: 15px;
 }
 
 .hero-statistics {
@@ -61,18 +61,22 @@ nav {
   flex-basis: 33%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
 .hero {
   background-image: url('./../../assets/login-background.png');
   color: white;
   text-align: center;
-
+  padding: 2em 0 1em;
 }
 
 .hero-logo-img {
   height: 5em;
+}
+
+.hero-header {
+  margin: 3em auto;
 }
 
 /*     EVENTS STYLING    */
@@ -80,6 +84,10 @@ nav {
 .events {
   background-color: white;
   height: 80vh;
+}
+
+.event-cards {
+  padding: 2em;
 }
 
 .events-header {
@@ -135,10 +143,10 @@ nav {
 
   visibility: hidden;
   opacity: 0;
-  
+
   /* padding: 1.5em; */
   /* transition: 0.5s ease-out; */
-  
+
   /* transform: translateY(45px); */
 }
 

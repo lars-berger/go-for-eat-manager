@@ -75,7 +75,7 @@ class NewEventModal extends React.Component {
               <div className="form-field form-field-participants">
               <p className="addnew-label">Participants:</p>
 
-                <select className="addnew-participants" name="participants" >
+                <select className="addnew-participants" onChange={this.handleInputChange} value={this.state.participants} name="participants" >
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>

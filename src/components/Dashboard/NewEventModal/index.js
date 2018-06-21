@@ -14,11 +14,11 @@ class NewEventModal extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({showModal: 'modal-visible'});
+    this.setState({ showModal: 'modal-visible' });
   }
-  
+
   componentWillUnmount() {
-    this.setState({showModal: ''});
+    this.setState({ showModal: '' });
   }
 
   handleInputChange = e => {
@@ -31,24 +31,24 @@ class NewEventModal extends React.Component {
     fetch('https://go-for-eat.herokuapp.com/manager/partyof/', {
       method: 'POST',
       headers: {
-        'Accept': 'application/json, text/plain', 
-        'Content-Type': 'application/json', 
+        'Accept': 'application/json, text/plain',
+        'Content-Type': 'application/json',
         'Authorization': `Bearer ${localStorage.getItem('go-for-eat-token')}`,
-        
+
       },
 
       body: JSON.stringify({
-       when: this.state.date,
-       time: this.state.time,
-       party_cipanti: this.state.participants,
-       offer: this.state.offer,
+        when: this.state.date,
+        time: this.state.time,
+        party_cipanti: this.state.participants,
+        offer: this.state.offer,
       })
     })
-    .then(res => res.json())
-    .then(() => {
-      this.props.closeModal("saved")
-    })
-    .catch(err => console.log(err))
+      .then(res => res.json())
+      .then(() => {
+        this.props.closeModal("saved")
+      })
+      .catch(err => console.log(err))
   }
 
 
@@ -57,11 +57,25 @@ class NewEventModal extends React.Component {
       <div className="NewEventModal">
         <div id="modal" className={this.state.showModal}>
           <div className="modal-container">
-          <h2 className="login-header">New Event</h2>
+            <h2 className="login-header">New Event</h2>
             <form onSubmit={this.handleSubmit} className="modal-form">
               <p id="addnew-error"></p>
-              <label>
-                <select name="participants" >
+
+              <div className="form-inline">
+                <div className="form-field">
+                  <p className="addnew-label">Date:</p>
+                  <input onChange={this.handleInputChange} value={this.state.date} type="text" name="date" className="" />
+                </div>
+                <div className="form-field">
+                  <p className="addnew-label addnew-label-time"> Time:</p>
+                  <input onChange={this.handleInputChange} value={this.state.time} type="text" name="time" className="addnew-textfield" />
+                </div>
+              </div>
+
+              <div className="form-field form-field-participants">
+              <p className="addnew-label">Participants:</p>
+
+                <select className="addnew-participants" name="participants" >
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -71,22 +85,16 @@ class NewEventModal extends React.Component {
                   <option value="7">7</option>
                   <option value="8">8</option>
                 </select>
-              </label>
-              <div className="form-field">
-                <p className="addnew-label">Date:</p>
-                <input onChange={this.handleInputChange} value={this.state.date} type="text" name="date" className="" />
               </div>
-              <div className="form-field">
-                <p className="addnew-label">Time:</p>
-                <input onChange={this.handleInputChange} value={this.state.time} type="text" name="time" placeholder="Optional" className="addnew-textfield" />
-              </div>
-              <div className="form-field">
-                <p onClick={this.props.closeModal}>BUTTON</p>
-                <input type="submit" className="btn addnew-submit" value="Confirm" />
-              </div>
+
               <div className="form-field">
                 <p className="addnew-label">Offer:</p>
-                <input onChange={this.handleInputChange} type="text" name="offer" value={this.state.offer}/>
+                <input onChange={this.handleInputChange} type="text" name="offer" value={this.state.offer} />
+              </div>
+
+              <div className="form-buttons-wrapper">
+                <input type="submit" className="btn addnew-submit" value="Confirm" />
+                <span onClick={this.props.closeModal} className="addnew-cancel">CANCEL</span>
               </div>
             </form>
           </div>

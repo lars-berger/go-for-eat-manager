@@ -167,3 +167,50 @@ nav {
   visibility: visible !important;
   opacity: 1 !important;
 }
+
+.form-inline {
+  display: flex;
+}
+.form-inline * {
+  flex-grow: 1;
+}
+
+.form-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
+
+.addnew-label {
+  margin-right: 1.5em;
+}
+
+.addnew-label-time {
+margin-left: 1.5em;
+}
+
+.form-field-participants {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.addnew-participants {
+  display: block;
+  background-color: #f7f7f7;
+  border: 1.3px solid rgb(136, 136, 136);
+}
+
+
+.addnew-cancel {
+  color: #33af68;
+  font-size: 1.3em;
+  margin: 0.2em 2em 0 0;
+  float: right;
+}
+
+.addnew-submit {
+  float: right;
+  font-size: 1.3em;
+}

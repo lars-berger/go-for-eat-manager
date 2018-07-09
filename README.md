@@ -1,5 +1,19 @@
+<p align="center">
+  <img src="https://image.ibb.co/mqHb2T/Screen_Shot_2018_07_09_at_18_16_51.png" width="700px" />
+</p>
+
+Go4eat is a cross paltform app that allows people to connect each others to share a meal, and so make new contacts and expand thier networks.
+
 
 ![manager-gif](src/assets/kapture-manager2.gif)
+
+
+## The Project
+
+Building up on the original [Go-For-Eat repo] (https://github.com/redspanner/go-for-eat-client) we set up onto adding a second frontend specifically focused on the managerial side of the app. 
+
+
+
 ## Getting Started
 
 To get up and running clone this repo to your machine.

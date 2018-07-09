@@ -10,7 +10,7 @@ Go4eat is a cross paltform app that allows people to connect each others to shar
 
 ## The Project
 
-Building up on the original [Go-For-Eat repo] (https://github.com/redspanner/go-for-eat-client) we set up onto adding a second frontend specifically focused on the managerial side of the app. 
+Building up on the original [Go-For-Eat repo](https://github.com/redspanner/go-for-eat-client) we set up onto adding a second frontend specifically focused on the managerial side of the app. 
 
 
 

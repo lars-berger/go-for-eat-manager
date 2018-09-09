@@ -28,27 +28,26 @@ class NewEventModal extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    fetch('https://go-for-eat.herokuapp.com/manager/partyof/', {
-      method: 'POST',
+    fetch("http://localhost:5000/manager/partyof/", {
+      method: "POST",
       headers: {
-        'Accept': 'application/json, text/plain',
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${localStorage.getItem('go-for-eat-token')}`,
-
+        Accept: "application/json, text/plain",
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("go-for-eat-token")}`
       },
 
       body: JSON.stringify({
         when: this.state.date,
         time: this.state.time,
         party_cipanti: this.state.participants,
-        offer: this.state.offer,
+        offer: this.state.offer
       })
     })
       .then(res => res.json())
       .then(() => {
-        this.props.closeModal("saved")
+        this.props.closeModal("saved");
       })
-      .catch(err => console.log(err))
+      .catch(err => console.log(err));
   }
 
 
@@ -75,7 +74,7 @@ class NewEventModal extends React.Component {
               <div className="form-field form-field-participants">
               <p className="addnew-label">Participants:</p>
 
-                <select className="addnew-participants" name="participants" >
+                <select className="addnew-participants" onChange={this.handleInputChange} value={this.state.participants} name="participants" >
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>

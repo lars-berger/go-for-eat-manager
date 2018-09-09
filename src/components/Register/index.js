@@ -20,10 +20,6 @@ class Register extends Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
-  componentDidUpdate = () => {
-    console.log("something..................................", this.props.token);
-  }
-
   submitRegister = async e => {
     e.preventDefault()
     const registerData = {

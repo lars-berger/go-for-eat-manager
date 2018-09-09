@@ -1,4 +1,4 @@
-const baseURL = "https://go-for-eat.herokuapp.com/"
+import baseURL from '../config'
 
 export default store => next => async (action) => {
   if (action.url) {
@@ -26,8 +26,3 @@ export default store => next => async (action) => {
 
   next(action)
 }
-
-// 3 MAIN ACTION TYPES:
-// 'REGISTER'
-// 'LOGIN'
-// 'DASHBOARD'

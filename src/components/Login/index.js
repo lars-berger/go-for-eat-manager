@@ -30,20 +30,22 @@ class Login extends Component {
       console.log('no email or password');
       return
     }
-    fetch('https://go-for-eat.herokuapp.com/manager/login', {
-      method: 'GET',
+    fetch("http://localhost:5000/manager/login", {
+      method: "GET",
       headers: {
-        'Accept': 'application/json, text/plain',
-        'Content-Type': 'application/json',
-        'email': this.state.email,
-        'password': this.state.password,
+        Accept: "application/json, text/plain",
+        "Content-Type": "application/json",
+        email: this.state.email,
+        password: this.state.password
       }
     })
       .then(res => res.json())
       .then(res => {
-        this.props.navigateTo('/dashboard')
+        this.props.navigateTo("/dashboard");
       })
-      .catch(err => this.setState({server: {response: err.toString()}}))
+      .catch(err =>
+        this.setState({ server: { response: err.toString() } })
+      );
   }
 
   handleChange = (address) => {
@@ -69,9 +71,9 @@ class Login extends Component {
               <div className="button-wrapper">
                 <label className="login-label" htmlFor="submit">{this.state.server.response?
                 this.state.server.response:''}</label>
-                <input type="submit" name="submit" className="btn" value="Accedi" />
+                <input type="submit" name="submit" className="btn" value="Log In" />
               </div>
-              <a className="login-forgot-password" href="#whatever"> password dimenticata</a>
+              <a className="login-forgot-password" href="#whatever"> forgot your password?</a>
             </form>
           </div>
         </div>
